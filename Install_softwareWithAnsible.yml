@@ -1,0 +1,16 @@
+- hosts: slavenode
+  become: yes
+  become_user: root
+  tasks:
+  - name: Install chromium driver
+    apt:
+     name: chromium-chromedriver
+     state: present
+     update_cache: yes
+  - name: Install git
+    apt:
+     name: git
+     state: present
+     update_cache: yes
+	
+   
